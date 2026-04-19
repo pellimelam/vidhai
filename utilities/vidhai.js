@@ -78,20 +78,19 @@ Give us your work, define your budget, and our system will execute it using the 
 
 <div class="section-title">Submit Your Work</div>
 
+<form id="vidhaiForm" class="card" enctype="multipart/form-data">
 
-<form id="vidhaiForm" class="card vidhai-form">
+<input type="text" name="name" placeholder="Your Name" required />
 
-<input type="text" placeholder="Your Name" required />
+<input type="email" name="email" placeholder="Email Address" required />
 
-<input type="email" placeholder="Email Address" required />
+<input type="tel" name="mobile" placeholder="Mobile Number" required pattern="[0-9]{10,15}" />
 
-<input type="tel" placeholder="Mobile Number" required pattern="[0-9]{10,15}" />
+<textarea name="requirement" placeholder="Describe your requirement in detail..." required></textarea>
 
-<textarea placeholder="Describe your requirement in detail..." required></textarea>
+<input type="number" name="budget" placeholder="Your Budget (₹ or $)" required />
 
-<input type="number" placeholder="Your Budget (₹ or $)" required />
-
-<input type="file" />
+<input type="file" name="file" />
 
 <button class="btn btn-primary" type="submit">
 Submit to VIDHAI
@@ -108,7 +107,7 @@ document.getElementById("vidhai").innerHTML = section
 
 
 // =========================
-// FORM LOGIC
+// FORM LOGIC (FINAL)
 // =========================
 
 const form = document.getElementById("vidhaiForm")
@@ -117,27 +116,25 @@ form.addEventListener("submit", async (e) => {
 
 e.preventDefault()
 
-const data = {
-name: form[0].value,
-email: form[1].value,
-mobile: form[2].value,
-requirement: form[3].value,
-budget: form[4].value
-}
+const formData = new FormData(form) // ✅ AUTO collects all fields + file
 
 try{
 
 const res = await fetch("https://purple-haze-4f4f.needfullfil.workers.dev", {
 method: "POST",
-headers: { "Content-Type": "application/json" },
-body: JSON.stringify(data)
+body: formData // ✅ IMPORTANT (no JSON)
 })
+
+if(!res.ok){
+throw new Error("Server error")
+}
 
 alert("✅ Submitted successfully. VIDHAI team will contact you.")
 form.reset()
 
 }catch(err){
 alert("❌ Submission failed. Try again.")
+console.error(err)
 }
 
 })
