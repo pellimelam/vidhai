@@ -78,7 +78,8 @@ Give us your work, define your budget, and our system will execute it using the 
 
 <div class="section-title">Submit Your Work</div>
 
-<form id="vidhaiForm" class="card">
+
+<form id="vidhaiForm" class="card vidhai-form">
 
 <input type="text" placeholder="Your Name" required />
 
