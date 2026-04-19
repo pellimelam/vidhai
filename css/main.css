@@ -235,3 +235,24 @@ color:#ffffff;
 padding:80px 20px;
 }
 
+
+
+form{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+input, textarea{
+padding:12px;
+border-radius:10px;
+border:1px solid var(--border);
+background:#020617;
+color:white;
+font-size:14px;
+}
+
+textarea{
+min-height:120px;
+resize:vertical;
+}
