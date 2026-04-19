@@ -4,20 +4,24 @@ const hero = `
 
 <section class="hero">
 
-<img src="./icons1/logo.png" class="logo" alt="Vidhwaan Logo">
+<img src="./icons1/logo.png" class="logo" alt="VIDHAI Logo">
 
-<h1>Vidhwaan Group</h1>
+<h1>VIDHAI</h1>
 
-<p>Technology · Culture · Innovation</p>
+<p>Human + AI Execution Platform</p>
+
+<p style="max-width:600px;margin:auto;">
+Give your task. Set your budget. VIDHAI completes it.
+</p>
 
 <div class="hero-buttons">
 
-<a class="btn btn-primary" href="https://tech.vidhwaan.com">
-Explore Technology
+<a class="btn btn-primary" href="#submit">
+Submit Work
 </a>
 
-<a class="btn btn-outline" href="https://pellimelam.vidhwaan.com">
-Explore Culture
+<a class="btn btn-outline" href="#how">
+How it Works
 </a>
 
 </div>
