@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vidhwaan.com/sitemap.xml
+Sitemap: https://vidhai.vidhwaan.com/sitemap.xml
