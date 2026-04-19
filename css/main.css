@@ -72,6 +72,9 @@ transparent 40%
 );
 opacity:0;
 transition:.25s;
+
+/* ✅ FIX */
+pointer-events:none;
 }
 
 .card:hover::before{
@@ -255,4 +258,8 @@ font-size:14px;
 textarea{
 min-height:120px;
 resize:vertical;
+}
+
+.vidhai-form::before{
+display:none;
 }
