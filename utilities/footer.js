@@ -10,10 +10,6 @@ const footer = `
 © 2026 Vidhwaan Group
 </p>
 
-<p class="footer-blessing">
-With the divine blessings of 
-<a href="/blessings.html">Shri Shri Shri Sadhguru Shrihari Venkaiah Swamy</a>
-</p>
 
 </div>
 
